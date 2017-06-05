@@ -104,7 +104,7 @@ Remove = "%s"
 Hourly = "%s"
 Hour = "%s"
 if Remove == "True":
-    cmd = 'crontab -l | grep -v "%s"  | crontab -'
+    cmd = 'crontab -l | grep -v "import sys,base64;exec(base64.b64decode("  | crontab -'
     print subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
     print subprocess.Popen('crontab -l', shell=True, stdout=subprocess.PIPE).stdout.read()
     print "Finished"
@@ -119,5 +119,5 @@ else:
             print subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
             print subprocess.Popen('crontab -l', shell=True, stdout=subprocess.PIPE).stdout.read()
             print "Finished"
-""" % (Remove, Hourly, Hour, launcher, launcher,  Hour, launcher)
+""" % (Remove, Hourly, Hour, launcher,  Hour, launcher)
         return script
